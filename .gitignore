@@ -20,7 +20,6 @@ public/javascripts/cache
 public/stylesheets/cache
 config/database.yml.example
 .yardoc/
-refinerycms.gemspec
 .bundle
 vendor/cache
 *.lock
