@@ -10,10 +10,6 @@ class Page < ActiveRecord::Base
   has_many :parts, :class_name => "PagePart", :order => "position ASC"
   accepts_nested_attributes_for :parts, :allow_destroy => true
 
-  # Docs for acts_as_indexed http://github.com/dougal/acts_as_indexed
-  acts_as_indexed :fields => [:title, :meta_keywords, :meta_description, :custom_title, :browser_title, :all_page_part_content],
-                  :index_file => [Rails.root.to_s, "tmp", "index"]
-
   before_destroy :deletable?
 
   # when a dialog pops up to link to a page, how many pages per page should there be

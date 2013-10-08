@@ -26,9 +26,6 @@ class Resource < ActiveRecord::Base
     end
   end
 
-  # Docs for acts_as_indexed http://github.com/dougal/acts_as_indexed
-  acts_as_indexed :fields => [:title, :type_of_content],
-                  :index_file => [Rails.root.to_s, "tmp", "index"]
 
   # when a dialog pops up with images, how many images per page should there be
   PAGES_PER_DIALOG = 12
